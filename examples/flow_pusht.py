@@ -29,6 +29,8 @@
 # NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
+# SPDX-License-Identifier: BSD-3-Clause
+#
 # This notebook is an example of "Affordance-based Robot Manipulation with Flow Matching" https://arxiv.org/abs/2409.01083
 
 import sys
@@ -159,13 +161,12 @@ def train():
             torch.save({'vision_encoder': nets.vision_encoder.state_dict(),
                         'noise_pred_net': nets.noise_pred_net.state_dict(),
                         }, PATH)
-            ema.restore(nets.parameters())
 
 
 ########################################################################
 ###### test the model
 def test():
-    PATH = './flow_ema_03000.pth'
+    PATH = '/home/hri/z_flow/checkpoint_t/flow_ema_03000.pth'
     state_dict = torch.load(PATH, map_location='cuda')
     ema_nets = nets
     ema_nets.vision_encoder.load_state_dict(state_dict['vision_encoder'])

@@ -1,0 +1,5 @@
+[tool.trust]
+disable_rules = ["HRI04", "HRI05", "HRI08"]
+
+[tool.trust.license]
+skip_paths = ["external"]

@@ -1,0 +1,9 @@
+include:
+  - component: $CI_SERVER_FQDN/TECH_Team/ci/secrets-detection/secrets-detection@2.2.0
+  - component: $CI_SERVER_FQDN/TECH_Team/ci/trust/trust@2.3.0
+  - component: $CI_SERVER_FQDN/TECH_Team/ci/python-pipeline/python@2.0.6
+    inputs:
+      testing: false
+      typing: false
+      linting: false
+      formatting: false

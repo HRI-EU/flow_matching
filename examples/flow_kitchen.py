@@ -29,6 +29,8 @@
 # NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
+# SPDX-License-Identifier: BSD-3-Clause
+#
 # This notebook is an example of "Affordance-based Robot Manipulation with Flow Matching" https://arxiv.org/abs/2409.01083
 
 import sys
@@ -158,13 +160,12 @@ for epoch in range(num_epochs):
         torch.save({
             'noise_pred_net': noise_pred_net.state_dict(),
         }, PATH)
-         ema.restore(noise_pred_net.parameters())
 
 sys.exit(0)
 
 ##################################################################
 ###### test the model
-PATH = './flow_ema_04500.pth'
+PATH = 'flow_ema_04500.pth'
 state_dict = torch.load(PATH, map_location='cuda')
 noise_pred_net.load_state_dict(state_dict['noise_pred_net'])
 
@@ -237,7 +238,7 @@ for epoch in range(n_test):
                         pbar.update(1)
                         pbar.set_postfix(reward=reward)
 
-                        if step_idx > max_steps or sum(rewards) == 4:
+                        if step_idx > max_steps:
                             done = True
                         if done:
                             break

@@ -1,0 +1,13 @@
+venv_fm/
+.vscode/
+data/
+*.npz
+/examples/checkpoints/
+/examples/data/
+/examples/data_to_send/
+examples/__pycache__/*
+checkpoint_t/
+fm_train_data_x.npy
+fm_train_data_y.npy
+runs/
+__pycache__/

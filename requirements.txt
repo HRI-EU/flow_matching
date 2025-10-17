@@ -21,6 +21,7 @@ gdown
 matplotlib
 ipython
 termcolor
+websockets
 torchdiffeq
 torchsde
 torchdyn
