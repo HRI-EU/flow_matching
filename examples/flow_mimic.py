@@ -35,8 +35,8 @@ import sys
 import time
 
 sys.dont_write_bytecode = True
-sys.path.append('../models')
-sys.path.append('../mimic')
+sys.path.append('../external/models')
+sys.path.append('../external')
 import os
 import imageio
 import matplotlib.pyplot as plt

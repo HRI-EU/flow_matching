@@ -34,7 +34,7 @@
 import sys
 
 sys.dont_write_bytecode = True
-sys.path.append('../models')
+sys.path.append('../external/models')
 import numpy as np
 import torch
 import pusht

@@ -34,8 +34,8 @@
 import sys
 
 sys.dont_write_bytecode = True
-sys.path.append('../models')
-sys.path.append('../kitchen')
+sys.path.append('../external/models')
+sys.path.append('../external')
 import os
 import matplotlib.pyplot as plt
 import numpy as np
