@@ -22,7 +22,7 @@ A reference implementation for the `Affordance-based Robot Manipulation with Flo
 Training and evaluation examples of using flow matching on PushT and Franka Kitchen benchmarks.
 
 🌷 **Getting Started**
-1. Clone this repo and change into it: `git clone git@github.com:HRI-EU/flow-matching-policy.git && cd flow_matching` \
+1. Clone this repo and change into it: `git clone git@github.com:HRI-EU/flow_matching.git && cd flow_matching` \
 2. Install the Python dependencies: `python -m venv venv_fm && source venv_fm/bin/activate && pip install --no-cache-dir -r requirements.txt`
 3. Enjoy!
 
