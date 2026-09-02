@@ -35,7 +35,7 @@ import sys
 import time
 
 sys.dont_write_bytecode = True
-sys.path.append('../models')
+sys.path.append('../external/models')
 import os
 import matplotlib.pyplot as plt
 import numpy as np
